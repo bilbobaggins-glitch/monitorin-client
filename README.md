@@ -4,4 +4,6 @@ Projeto para disciplina de "mobile" (dispositivos móveis). Consiste em um app p
 
 O aplicativo segue uma arquitetura cliente-servidor, sendo que esse repositório se refere a parte cliente do Monitorin.
 
-De framework foi utilizado o Ionic baseado em Angular2 e de ORM o TypeORM para typescript. A comunicação é feita via AJAX + JSON.
+De framework foi utilizado o Ionic baseado em Angular2 e de ORM o TypeORM. A comunicação é feita via AJAX + JSON.
+
+Linguagens: TypeScript, Javascript, HTML, CSS.
