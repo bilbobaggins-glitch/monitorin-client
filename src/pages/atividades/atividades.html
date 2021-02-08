@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Atividades
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-card id="id1" *ngFor="let estudanteAtividadeIter of estudanteAtividades">
+    <ion-list>
+      <ion-item id="id3">
+        <h2>
+          {{ estudanteAtividadeIter.atividade.nome }} - {{ estudanteAtividadeIter.atividade.dataEntrega.getDate() }} / {{ estudanteAtividadeIter.atividade.dataEntrega.getMonth() + 1 }}
+        </h2>
+
+        <ng-container 
+          *ngIf="estudanteAtividadeIter.nota !== undefined && estudanteAtividadeIter.notaRecomendada == undefined; then firstBlock;">
+        </ng-container>
+        <ng-template #firstBlock>
+          <p>
+            Nota: {{ estudanteAtividadeIter.nota }}
+          </p>
+        </ng-template>
+
+        <ng-container 
+        *ngIf="estudanteAtividadeIter.notaRecomendada !== undefined; then secondBlock;">
+        </ng-container>
+        <ng-template #secondBlock>
+          <p>
+            Nota RECOMENDADA: {{ estudanteAtividadeIter.notaRecomendada }}
+          </p>
+        </ng-template>
+
+        <ng-container 
+        *ngIf="estudanteAtividadeIter.nota == undefined && estudanteAtividadeIter.notaRecomendada == undefined; then thirdBlock;">
+        </ng-container>
+        <ng-template #thirdBlock>
+          <p>
+            Nota: N/A
+          </p>
+        </ng-template>
+
+      </ion-item>
+    </ion-list>
+  </ion-card>
+</ion-content>

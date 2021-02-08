@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Matemática Aplicada II: Atividades</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+      <!-- <ion-list id="matemTicaAplicadaIIAtividades-list2">
+        <ion-item id="matemTicaAplicadaIIAtividades-list-item18">Atividade 1
+          <span>27/05</span>
+        </ion-item>
+        
+        <ion-item id="matemTicaAplicadaIIAtividades-list-item19">Nota
+          <span>7.5</span>
+        </ion-item>
+
+      </ion-list>
+
+      <ion-list id="matemTicaAplicadaIIAtividades-list4">
+        <ion-item id="matemTicaAplicadaIIAtividades-list-item27">Atividade 2
+          <span>10/06</span>
+        </ion-item>
+      </ion-list>
+
+      <ion-list id="matemTicaAplicadaIIAtividades-list6">
+        <ion-item id="matemTicaAplicadaIIAtividades-list-item40">Nota recomendada
+          <span>6.0</span>
+        </ion-item>
+      </ion-list>
+
+      <ion-list id="matemTicaAplicadaIIAtividades-list7">
+        <ion-item id="matemTicaAplicadaIIAtividades-list-item41">Atividade 3</ion-item>
+        <ion-item id="matemTicaAplicadaIIAtividades-list-item42">Nota
+          <span>N/A</span>
+        </ion-item>
+      </ion-list> -->
+
+      <ion-list>
+        <div *ngFor="let estudanteAtv of estudanteAtividades">
+            <ion-item-divider color="dark">
+                <h2>
+                    {{ estudanteAtv.nome }}
+                </h2>
+              </ion-item-divider>
+              <ion-item>
+                <span>Data</span>
+                <span item-end>{{ estudanteAtv.data }}</span>
+              </ion-item>
+              <ion-item>
+                <span>Nota</span>
+                <span item-end>{{ estudanteAtv.nota }}</span>
+              </ion-item>
+        </div>
+      </ion-list>
+
+</ion-content>

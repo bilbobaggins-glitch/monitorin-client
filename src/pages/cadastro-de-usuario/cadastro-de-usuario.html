@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Cadastro de usuário
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page11">
+  <button id="cadastroDeUsuario-button19" ion-button color="positive" block>
+    Voltar
+  </button>
+  <form id="cadastroDeUsuario-form16">
+    <ion-list id="cadastroDeUsuario-list7">
+      <ion-item id="cadastroDeUsuario-input8">
+        <ion-label>
+          Nome
+        </ion-label>
+        <ion-input type="text" placeholder="" [(ngModel)]="nomeInput" name="name"></ion-input>
+      </ion-item>
+      <ion-item id="cadastroDeUsuario-input9">
+        <ion-label>
+          Sobrenome
+        </ion-label>
+        <ion-input type="text" placeholder="" [(ngModel)]="sobrenomeInput" name="surname"></ion-input>
+      </ion-item>
+      <ion-item id="cadastroDeUsuario-input10">
+        <ion-label>
+          RG
+        </ion-label>
+        <ion-input type="text" placeholder="" [(ngModel)]="rgInput" name="birthRegister"></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <ion-item id="cadastroDeUsuario-input11">
+      <ion-label>
+        Nome de usuário
+      </ion-label>
+      <ion-input type="text" placeholder="" [(ngModel)]="nomeDeUsuarioInput" name="username"></ion-input>
+    </ion-item>
+    <ion-item id="cadastroDeUsuario-input12">
+      <ion-label>
+        Senha
+      </ion-label>
+      <ion-input type="text" placeholder="" [(ngModel)]="senhaInput" name="password"></ion-input>
+    </ion-item>
+    <ion-item id="cadastroDeUsuario-input13">
+      <ion-label>
+        Confirmar senha
+      </ion-label>
+      <ion-input type="text" placeholder="" [(ngModel)]="confirmacaoDeSenhaInput" name="confirmation"></ion-input>
+    </ion-item>
+    <button id="cadastroDeUsuario-button18" ion-button color="stable" block (click)="cadastrar()">
+      Cadastrar
+    </button>
+  </form>
+</ion-content>

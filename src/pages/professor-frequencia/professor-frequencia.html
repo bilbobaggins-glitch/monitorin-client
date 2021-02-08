@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Frequência: 24/03
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card *ngFor="let estudante of estudantes">
+    <ion-list>
+        <ion-item color="dark">
+          <ion-avatar item-left>
+            <img src="https://image.flaticon.com/icons/svg/53/53080.svg">
+          </ion-avatar>
+          <h2 ion-text color="light">
+            {{ estudante.nome }}
+          </h2>
+        </ion-item>
+        <ion-item>
+          <ion-label>Presente</ion-label>
+          <ion-checkbox item-end></ion-checkbox>
+        </ion-item>
+
+    </ion-list>
+  </ion-card>
+
+  <ion-grid>
+      
+      <ion-row>
+        <ion-col col-6>
+          <button ion-button full color="dark">SALVAR</button>
+        </ion-col>
+        <ion-col col-6> <button ion-button full color="dark">LIMPAR</button> </ion-col>
+      </ion-row>
+</ion-grid>
+</ion-content>

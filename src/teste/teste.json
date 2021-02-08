@@ -1,0 +1,67 @@
+{
+    "dadosEntrada": {
+        "usuario": "valentinasilva1",
+        "senha": "1234",
+        "turma": {
+            "disciplinaNome": "Estudos Avançados do Kakaroto",
+            "dataInicial": "2017-07-10T03:00:00.000Z",
+            "dataFinal": "2018-08-06T03:00:00.000Z",
+            "semanaDias": [
+                {
+                    "nome": "Segunda",
+                    "valor": false
+                },
+                {
+                    "nome": "Terça",
+                    "valor": true
+                },
+                {
+                    "nome": "Quarta",
+                    "valor": true
+                },
+                {
+                    "nome": "Quinta",
+                    "valor": true
+                },
+                {
+                    "nome": "Sexta",
+                    "valor": false
+                }
+            ],
+            "notaFinalMinima": 0,
+            "frequenciaMinima": 0,
+            "estudantes": [
+                {
+                    "id": 4,
+                    "nome": "miguel",
+                    "sobrenome": "silva2",
+                    "estudanteAtividades": [],
+                    "estudanteTurmas": [],
+                    "diaDeAulas": [],
+                    "turmas": []
+                },
+                {
+                    "id": 5,
+                    "nome": "miguel",
+                    "sobrenome": "silva3",
+                    "estudanteAtividades": [],
+                    "estudanteTurmas": [],
+                    "diaDeAulas": [],
+                    "turmas": []
+                },
+                {
+                    "id": 6,
+                    "nome": "miguel",
+                    "sobrenome": "silva4",
+                    "estudanteAtividades": [],
+                    "estudanteTurmas": [],
+                    "diaDeAulas": [],
+                    "turmas": []
+                }
+            ]
+        }
+    },
+    "dadosSaida": {
+        "sucesso": null
+    }
+}

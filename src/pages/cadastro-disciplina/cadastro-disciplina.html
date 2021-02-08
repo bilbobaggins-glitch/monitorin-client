@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Cadastro de Discipl
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+
+    <ion-item-group>
+      <ion-item-divider color="dark">
+        Dados Iniciais
+      </ion-item-divider>
+      <ion-item>
+        <ion-label floating>Disciplina</ion-label>
+        <ion-input type="text" [(ngModel)]="this.turma.disciplinaNome"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Data inicial</ion-label>
+        <ion-datetime displayFormat="DD/MM/YYYY" pickerFormat="DD/MM/YYYY" (ionChange)="dataInicialAtualizar($event)"></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Data final</ion-label>
+        <ion-datetime displayFormat="DD/MM/YYYY" pickerFormat="DD/MM/YYYY" (ionChange)="dataFinalAtualizar($event)"></ion-datetime>
+      </ion-item>
+    </ion-item-group>
+
+    <ion-item-group>
+      <ion-item-divider color="dark"> Fórmula </ion-item-divider>
+      <button ion-item color="light" (click)="showPromptFormulaAtividadeAdicionar()">
+        <ion-icon name="add" item-start></ion-icon>
+        Adicionar
+      </button>
+
+      <!-- <ion-item *ngFor="let atividade of atividades">
+        <ion-label>{{ atividade.nome }}</ion-label>
+        <ion-select (ionChange)="atualizarAtividade($event, atividade)">
+          <ion-option *ngFor="let intNumber of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]">{{ intNumber }}</ion-option>
+        </ion-select>
+      </ion-item> -->
+
+      <ion-item-divider color="dark"> Dias da Semana </ion-item-divider>
+      <ion-item *ngFor="let semanaDia of this.turma.semanaDias">
+        <ion-label>{{ semanaDia.nome }}</ion-label>
+        <ion-checkbox [(ngModel)]="semanaDia.valor"></ion-checkbox>
+      </ion-item>
+    </ion-item-group>
+
+      <ion-item-group>
+        <ion-item-divider color="dark"> Alunos </ion-item-divider>
+        <button ion-item color="light" (click)="showPromptAlunoAdicionar()">
+          <ion-icon name="add" item-start></ion-icon>
+          Adicionar
+        </button>
+        <ion-item *ngFor="let estudante of estudantesEscolhidos">
+          <ion-label>{{ estudante.nome + " " + estudante.sobrenome }}</ion-label>
+        </ion-item>
+      </ion-item-group>
+
+    <ion-grid>
+      
+      <ion-row>
+        <ion-col col-6>
+          <button ion-button full color="dark" (click)="cadastrar()">OK</button>
+        </ion-col>
+        <ion-col col-6> <button ion-button full color="dark">CANCELAR</button> </ion-col>
+      </ion-row>
+
+    </ion-grid>
+  </ion-list>
+</ion-content>

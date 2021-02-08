@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Login
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page10">
+  <form id="login-form15">
+    <ion-list id="login-list6">
+      <ion-item id="login-input6">
+        <ion-label>
+          Nome de usuário
+        </ion-label>
+        <ion-input type="text" placeholder="" name="randomname2" [(ngModel)]="nomeDeUsuarioInput"></ion-input>
+      </ion-item>
+      <ion-item id="login-input7">
+        <ion-label>
+          Senha
+        </ion-label>
+        <ion-input type="password" placeholder="" name="randomname" [(ngModel)]="senhaInput"></ion-input>
+      </ion-item>
+    </ion-list>
+    <div class="spacer" style="height:40px;" id="login-spacer2"></div>
+    <button id="login-button16" ion-button color="stable" block (click)="goToHome()">
+        Entrar
+    </button>
+    <button id="login-button17" ion-button clear color="positive" block (click)="goToCadastroUsuario()">
+      Crie uma conta
+    </button>
+  </form>
+</ion-content>

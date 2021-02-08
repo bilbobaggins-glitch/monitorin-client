@@ -1,0 +1,25 @@
+<ion-menu [content]="content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+      <button ion-item (click)="voltarMenu()" *ngIf="this.itensAnteriores.length > 1">
+        Voltar
+      </button>
+      <button ion-item *ngFor="let item of this.itens" (click)="menuRedirecionar(item)">
+        {{ item.label }}
+      </button>
+      <button ion-item (click)="logoff()">
+        Sair
+      </button>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
